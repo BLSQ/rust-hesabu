@@ -3,7 +3,12 @@ use evalexpr::build_operator_tree;
 use std::collections::HashMap;
 
 fn main() {
-    let mut problem = [["c", "a + 10 * b"], ["a", "10"], ["b", "10+a"]];
+    let mut problem = [
+        ["c", "a + 10 * b"],
+        ["a", "10"],
+        ["b", "10+a"],
+        ["d", "a + sin(b)"],
+    ];
 
     for key_value in &problem {
         let key = key_value[0];
