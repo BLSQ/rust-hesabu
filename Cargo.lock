@@ -1,0 +1,14 @@
+[[package]]
+name = "evalexpr"
+version = "5.0.0-alpha.0"
+source = "git+https://github.com/ISibboI/evalexpr.git#2f7d1c2dfef94cca01ca684f955c924b47f3da38"
+
+[[package]]
+name = "rust-hesabu"
+version = "0.1.0"
+dependencies = [
+ "evalexpr 5.0.0-alpha.0 (git+https://github.com/ISibboI/evalexpr.git)",
+]
+
+[metadata]
+"checksum evalexpr 5.0.0-alpha.0 (git+https://github.com/ISibboI/evalexpr.git)" = "<none>"
