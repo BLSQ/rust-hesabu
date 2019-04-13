@@ -1,0 +1,7 @@
+[package]
+name = "rust-hesabu"
+version = "0.1.0"
+authors = ["mestachs <mestachs>"]
+edition = "2018"
+
+[dependencies]
