@@ -5,7 +5,20 @@ for fun and perhaps profit (let's hope better perf)
 
 # development
 using [evalexpr](https://github.com/ISibboI/evalexpr)
-try to https://github.com/ISibboI/evalexpr/issues/37
+try port this algo https://github.com/ISibboI/evalexpr/issues/37
+
+## 
+
+## TODO
+- [input/output as json](https://rust-lang-nursery.github.io/cli-wg/in-depth/machine-communication.html#json-output-for-machines
+)
+- error handling (when parsing, evaluating,...)
+- array support ?
+- other functions
+  - if
+  - avg,...
+
+## current dev notes
 
 ```
 cargo build
