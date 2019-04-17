@@ -6,3 +6,4 @@ edition = "2018"
 
 [dependencies]
 evalexpr = { git = "https://github.com/ISibboI/evalexpr.git" } 
+pathfinding = "1.1.12"
