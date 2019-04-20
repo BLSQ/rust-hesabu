@@ -4,8 +4,9 @@ try to port to rust [go-hesabu](https://github.com/BLSQ/go-hesabu)
 for fun and perhaps profit (let's hope better perf)
 
 # development
-using [evalexpr](https://github.com/ISibboI/evalexpr) for expression parsing and evaluation
-using [pathfinding](https://github.com/samueltardieu/pathfinding) to deduce order of evaluation
+
+* using [evalexpr](https://github.com/ISibboI/evalexpr) for expression parsing and evaluation
+* using [pathfinding](https://github.com/samueltardieu/pathfinding) to deduce order of evaluation
 
 ## 
 
