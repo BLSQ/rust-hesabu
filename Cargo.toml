@@ -5,5 +5,6 @@ authors = ["mestachs <mestachs>"]
 edition = "2018"
 
 [dependencies]
-evalexpr = { git = "https://github.com/ISibboI/evalexpr.git" } 
+evalexpr = { git = "https://github.com/ISibboI/evalexpr.git", features = ["serde_support"] } 
 pathfinding = "1.1.12"
+serde_json= "1.0.19"

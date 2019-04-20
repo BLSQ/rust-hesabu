@@ -21,20 +21,6 @@ try port this algo https://github.com/ISibboI/evalexpr/issues/37
 ## current dev notes
 
 ```
-cargo build
-time ./target/debug/rust-hesabu 
-PROCESSING : c => a + 10 * b
-a
-b
-PROCESSING : a => 10
-PROCESSING : b => 10+a
-a
-PROCESSING : d => a + sin(b)
-a
-sin
-b
-
-real	0m0.003s
-user	0m0.000s
-sys	0m0.000s
+cargo build --release && time cat test.json | target/release/rust-hesabu
+{"d":{"Float":31.0},"a":{"Float":10.5},"b":{"Float":20.5},"e":{"Int":10},"c":{"Float":215.5}}
 ```
