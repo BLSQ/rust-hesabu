@@ -9,6 +9,59 @@ try port this algo https://github.com/ISibboI/evalexpr/issues/37
 
 ## 
 
+## Solver algorithm
+
+ the algorithm to solve the problems is as follow:
+
+Given the following problem
+
+```json
+{
+  "c": "a + 10 * b",
+  "a": "10",
+  "b": "10+a"
+}
+```
+
+**1.** parse all equations and extract their dependencies
+
+```json
+{
+  "c": ["a","b"],
+  "a": [ ],
+  "b": [ "a" ]
+}
+```
+
+**2.** to deduce the order of evaluation of the various expressions, we do a reverse [topological sort](https://github.com/otaviokr/topological-sort#topological-sort) based on these dependencies
+```json
+["a", "b", "c"]
+```
+example implementation in [rust](https://github.com/gifnksm/topological-sort-rs/blob/master/src/lib.rs#L305)
+
+**3.** evaluate the equations one by one and store their values in the context for further reuse
+
+*3.1* evaluate "10" and store as "a"
+```
+{
+  "a": "10"
+}
+```
+*3.2* evaluate "10+a" and store as "b"
+```
+{
+  "a": "10"
+  "b": "20"
+}
+```
+*3.3* evaluate  "a + 10 * b" and store as "c"
+```
+  "a": "10",
+  "b": "20",
+  "c": "210"
+```
+**4.** solution complete !
+
 ## TODO
 - [input/output as json](https://rust-lang-nursery.github.io/cli-wg/in-depth/machine-communication.html#json-output-for-machines
 )
